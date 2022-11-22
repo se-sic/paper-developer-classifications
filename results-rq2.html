@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Automatic Core-Developer Identification on GitHub: A Validation Study</title>
+
+    <link href="./bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/ekko-lightbox.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./bootstrap/css/custom.css" media="screen">
+    <link rel="stylesheet" href="./bootstrap/css/pygment.css" media="screen">
+
+</head>
+<body class="pt-0">
+
+<header class="jumbotron">
+    <div class="container">
+
+        <h1>
+            Automatic Core-Developer Identification on GitHub:<br> A Validation Study<br>
+        </h1>
+        <p class="paper-venue">
+            &mdash; <a href="./index.html">Back to main page</a>
+        </p>
+
+    </div>
+</header>
+
+<main class="container">
+
+
+        <header>
+            <h3 id="results">RQ<sub>2</sub>: Is the set of privileged developers D<sub>priv</sub> a sound approximation for the set of core developers?</h3>
+        </header>
+        
+        <p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-distances-privileged"><span>Validity of our Set of Core Developers</span></h5>
+<p></p>
+
+<a>D<sub>doc</sub>: documented developers in a project-reported list</a><br>
+<a>D<sub>priv</sub>: privileged developers (core developers based on privileged events)</a><br>
+<a>D<sub>priv+</sub>: privileged+extended developers (core developers based on privileged and extended events)</a>
+<table class="table table-hover">
+    <thead>
+    <tr class="bg-secondary">
+        <td><b>3 months time-window<b></td>
+        <td class="tool">Angular</td>
+        <td class="tool">Electron</td>
+        <td class="tool">Keras</td>
+        <td class="tool">Kubernetes</td>
+        <td class="tool">Moby</td>
+        <td class="tool">Next.js</td>
+        <td class="tool">Node.js</td>
+        <td class="tool">OpenSSL</td>
+        <td class="tool">React</td>
+        <td class="tool">reveal.js</td>
+        <td class="tool">Vue</td>
+        <td class="tool">webpack</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>|<a>D<sub>doc</sub>|</td>
+        <td class="number-int">30</td>
+        <td class="number-int">17</td>
+        <td class="number-int">5</td>
+        <td class="number-int">238</td>
+        <td class="number-int">21</td>
+        <td class="number-int">6</td>
+        <td class="number-int">108</td>
+        <td class="number-int">18</td>
+        <td class="number-int">9</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">4</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>priv</sub>|</td>
+        <td class="number-int">18</td>
+        <td class="number-int">10</td>
+        <td class="number-int">3</td>
+        <td class="number-int">30</td>
+        <td class="number-int">9</td>
+        <td class="number-int">20</td>
+        <td class="number-int">26</td>
+        <td class="number-int">9</td>
+        <td class="number-int">9</td>
+        <td class="number-int">0</td>
+        <td class="number-int">3</td>
+        <td class="number-int">5</td>
+    </tr>
+    <tr>
+        <td>|D<sub>priv+</sub>|</td>
+        <td class="number-int">35</td>
+        <td class="number-int">19</td>
+        <td class="number-int">7</td>
+        <td class="number-int">611</td>
+        <td class="number-int">9</td>
+        <td class="number-int">22</td>
+        <td class="number-int">53</td>
+        <td class="number-int">174</td>
+        <td class="number-int">208</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">6</td>
+    </tr>
+    <tr class="bg-light">
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;<a>D<sub>priv</sub>)</td>
+        <td class="number-float">0.37</td>
+        <td class="number-float">0.59</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.06</td>
+        <td class="number-float">0.36</td>
+        <td class="number-float">0.04</td>
+        <td class="number-float">0.23</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.00</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.29</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Completeness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.59</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.06</td>
+        <td class="number-float">0.38</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.23</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.67</td>
+        <td class="number-float">0.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Soundness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.72</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.47</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.05</td>
+        <td class="number-float">0.96</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.67</td>
+        <td class="number-float">---</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.40</td>
+    </tr>
+    <tr>
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;<a>D<sub>doc</sub><sub>+</sub>)</td>
+        <td class="number-float">0.51</td>
+        <td class="number-float">0.71</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.10</td>
+        <td class="number-float">0.36</td>
+        <td class="number-float">0.04</td>
+        <td class="number-float">0.41</td>
+        <td class="number-float">0.10</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.00</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.25</td>
+    </tr>
+    <tr>
+        <td>Completeness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.73</td>
+        <td class="number-float">0.88</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.32</td>
+        <td class="number-float">0.38</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.44</td>
+        <td class="number-float">0.94</td>
+        <td class="number-float">0.78</td>
+        <td class="number-float">0.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr>
+        <td>Soundness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.63</td>
+        <td class="number-float">0.79</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.12</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.05</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.10</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.33</td>
+    </tr>
+    <tr class="bg-secondary">
+        <td><b>6 months time-window<b></td>
+        <td class="tool">Angular</td>
+        <td class="tool">Electron</td>
+        <td class="tool">Keras</td>
+        <td class="tool">Kubernetes</td>
+        <td class="tool">Moby</td>
+        <td class="tool">Next.js</td>
+        <td class="tool">Node.js</td>
+        <td class="tool">OpenSSL</td>
+        <td class="tool">React</td>
+        <td class="tool">reveal.js</td>
+        <td class="tool">Vue</td>
+        <td class="tool">webpack</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>doc</sub>|</td>
+        <td class="number-int">30</td>
+        <td class="number-int">17</td>
+        <td class="number-int">5</td>
+        <td class="number-int">238</td>
+        <td class="number-int">21</td>
+        <td class="number-int">6</td>
+        <td class="number-int">108</td>
+        <td class="number-int">18</td>
+        <td class="number-int">9</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">4</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>priv</sub>|</td>
+        <td class="number-int">20</td>
+        <td class="number-int">12</td>
+        <td class="number-int">5</td>
+        <td class="number-int">51</td>
+        <td class="number-int">9</td>
+        <td class="number-int">25</td>
+        <td class="number-int">34</td>
+        <td class="number-int">11</td>
+        <td class="number-int">10</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">6</td>
+    </tr>
+    <tr>
+        <td>|D<sub>priv+</sub>|</td>
+        <td class="number-int">40</td>
+        <td class="number-int">22</td>
+        <td class="number-int">10</td>
+        <td class="number-int">1125</td>
+        <td class="number-int">9</td>
+        <td class="number-int">27</td>
+        <td class="number-int">63</td>
+        <td class="number-int">199</td>
+        <td class="number-int">392</td>
+        <td class="number-int">2</td>
+        <td class="number-int">3</td>
+        <td class="number-int">7</td>
+    </tr>
+    <tr class="bg-light">
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;<a>D<sub>priv</sub>)</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.61</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.08</td>
+        <td class="number-float">0.36</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.29</td>
+        <td class="number-float">0.53</td>
+        <td class="number-float">0.46</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.25</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Completeness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.65</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.38</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.30</td>
+        <td class="number-float">0.56</td>
+        <td class="number-float">0.67</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Soundness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.75</td>
+        <td class="number-float">0.92</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.04</td>
+        <td class="number-float">0.94</td>
+        <td class="number-float">0.91</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.33</td>
+    </tr>
+    <tr>
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;D<sub>priv+</sub>)</td>
+        <td class="number-float">0.49</td>
+        <td class="number-float">0.63</td>
+        <td class="number-float">0.25</td>
+        <td class="number-float">0.08</td>
+        <td class="number-float">0.36</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.02</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.22</td>
+    </tr>
+    <tr>
+        <td>Completeness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.77</td>
+        <td class="number-float">0.88</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.44</td>
+        <td class="number-float">0.38</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.53</td>
+        <td class="number-float">0.94</td>
+        <td class="number-float">0.78</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr>
+        <td>Soundness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.58</td>
+        <td class="number-float">0.68</td>
+        <td class="number-float">0.30</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.04</td>
+        <td class="number-float">0.90</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.02</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.29</td>
+    </tr>
+        <tr class="bg-secondary">
+        <td><b>9 months time-window<b></td>
+        <td class="tool">Angular</td>
+        <td class="tool">Electron</td>
+        <td class="tool">Keras</td>
+        <td class="tool">Kubernetes</td>
+        <td class="tool">Moby</td>
+        <td class="tool">Next.js</td>
+        <td class="tool">Node.js</td>
+        <td class="tool">OpenSSL</td>
+        <td class="tool">React</td>
+        <td class="tool">reveal.js</td>
+        <td class="tool">Vue</td>
+        <td class="tool">webpack</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>doc</sub>|</td>
+        <td class="number-int">30</td>
+        <td class="number-int">17</td>
+        <td class="number-int">5</td>
+        <td class="number-int">238</td>
+        <td class="number-int">21</td>
+        <td class="number-int">6</td>
+        <td class="number-int">108</td>
+        <td class="number-int">18</td>
+        <td class="number-int">9</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">4</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>priv</sub>|</td>
+        <td class="number-int">23</td>
+        <td class="number-int">13</td>
+        <td class="number-int">12</td>
+        <td class="number-int">61</td>
+        <td class="number-int">9</td>
+        <td class="number-int">32</td>
+        <td class="number-int">36</td>
+        <td class="number-int">11</td>
+        <td class="number-int">17</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">6</td>
+    </tr>
+    <tr>
+        <td>|D<sub>priv+</sub>|</td>
+        <td class="number-int">46</td>
+        <td class="number-int">24</td>
+        <td class="number-int">19</td>
+        <td class="number-int">1630</td>
+        <td class="number-int">12</td>
+        <td class="number-int">181</td>
+        <td class="number-int">73</td>
+        <td class="number-int">134</td>
+        <td class="number-int">629</td>
+        <td class="number-int">2</td>
+        <td class="number-int">6</td>
+        <td class="number-int">7</td>
+    </tr>
+    <tr class="bg-light">
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;<a>D<sub>priv</sub>)</td>
+        <td class="number-float">0.47</td>
+        <td class="number-float">0.58</td>
+        <td class="number-float">0.42</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.36</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.31</td>
+        <td class="number-float">0.53</td>
+        <td class="number-float">0.30</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.25</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Completeness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.57</td>
+        <td class="number-float">0.65</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.10</td>
+        <td class="number-float">0.38</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.31</td>
+        <td class="number-float">0.56</td>
+        <td class="number-float">0.67</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Soundness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.74</td>
+        <td class="number-float">0.85</td>
+        <td class="number-float">0.42</td>
+        <td class="number-float">0.39</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.94</td>
+        <td class="number-float">0.91</td>
+        <td class="number-float">0.35</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.33</td>
+    </tr>
+    <tr>
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;D<sub>priv+</sub>)</td>
+        <td class="number-float">0.46</td>
+        <td class="number-float">0.58</td>
+        <td class="number-float">0.26</td>
+        <td class="number-float">0.07</td>
+        <td class="number-float">0.38</td>
+        <td class="number-float">0.01</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.12</td>
+        <td class="number-float">0.01</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.29</td>
+        <td class="number-float">0.22</td>
+    </tr>
+    <tr>
+        <td>Completeness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.80</td>
+        <td class="number-float">0.88</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.63</td>
+        <td class="number-float">0.89</td>
+        <td class="number-float">0.78</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.67</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr>
+        <td>Soundness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.52</td>
+        <td class="number-float">0.63</td>
+        <td class="number-float">0.26</td>
+        <td class="number-float">0.07</td>
+        <td class="number-float">0.75</td>
+        <td class="number-float">0.01</td>
+        <td class="number-float">0.93</td>
+        <td class="number-float">0.12</td>
+        <td class="number-float">0.01</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.29</td>
+    </tr>
+        <tr class="bg-secondary">
+        <td><b>12 months time-window<b></td>
+        <td class="tool">Angular</td>
+        <td class="tool">Electron</td>
+        <td class="tool">Keras</td>
+        <td class="tool">Kubernetes</td>
+        <td class="tool">Moby</td>
+        <td class="tool">Next.js</td>
+        <td class="tool">Node.js</td>
+        <td class="tool">OpenSSL</td>
+        <td class="tool">React</td>
+        <td class="tool">reveal.js</td>
+        <td class="tool">Vue</td>
+        <td class="tool">webpack</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>doc</sub>|</td>
+        <td class="number-int">30</td>
+        <td class="number-int">17</td>
+        <td class="number-int">5</td>
+        <td class="number-int">238</td>
+        <td class="number-int">21</td>
+        <td class="number-int">6</td>
+        <td class="number-int">108</td>
+        <td class="number-int">18</td>
+        <td class="number-int">9</td>
+        <td class="number-int">1</td>
+        <td class="number-int">3</td>
+        <td class="number-int">4</td>
+    </tr>
+    <tr>
+        <td>|<a>D<sub>priv</sub>|</td>
+        <td class="number-int">24</td>
+        <td class="number-int">13</td>
+        <td class="number-int">18</td>
+        <td class="number-int">69</td>
+        <td class="number-int">19</td>
+        <td class="number-int">26</td>
+        <td class="number-int">41</td>
+        <td class="number-int">11</td>
+        <td class="number-int">19</td>
+        <td class="number-int">1</td>
+        <td class="number-int">4</td>
+        <td class="number-int">6</td>
+    </tr>
+    <tr>
+        <td>|D<sub>priv+</sub>|</td>
+        <td class="number-int">53</td>
+        <td class="number-int">25</td>
+        <td class="number-int">25</td>
+        <td class="number-int">2019</td>
+        <td class="number-int">22</td>
+        <td class="number-int">29</td>
+        <td class="number-int">79</td>
+        <td class="number-int">199</td>
+        <td class="number-int">736</td>
+        <td class="number-int">2</td>
+        <td class="number-int">9</td>
+        <td class="number-int">7</td>
+    </tr>
+    <tr class="bg-light">
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;<a>D<sub>priv</sub>)</td>
+        <td class="number-float">0.46</td>
+        <td class="number-float">0.58</td>
+        <td class="number-float">0.28</td>
+        <td class="number-float">0.10</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.35</td>
+        <td class="number-float">0.53</td>
+        <td class="number-float">0.27</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.25</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Completeness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.57</td>
+        <td class="number-float">0.64</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.11</td>
+        <td class="number-float">0.57</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.36</td>
+        <td class="number-float">0.56</td>
+        <td class="number-float">0.67</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr class="bg-light">
+        <td>Soundness(<a>D<sub>priv</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.71</td>
+        <td class="number-float">0.85</td>
+        <td class="number-float">0.28</td>
+        <td class="number-float">0.39</td>
+        <td class="number-float">0.63</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.95</td>
+        <td class="number-float">0.91</td>
+        <td class="number-float">0.32</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.25</td>
+        <td class="number-float">0.33</td>
+    </tr>
+    <tr>
+        <td>JaccardIndex(<a>D<sub>doc</sub>,&nbsp;D<sub>priv+</sub>)</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.56</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.06</td>
+        <td class="number-float">0.43</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.61</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.01</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.22</td>
+    </tr>
+    <tr>
+        <td>Completeness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.83</td>
+        <td class="number-float">0.88</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.54</td>
+        <td class="number-float">0.62</td>
+        <td class="number-float">0.17</td>
+        <td class="number-float">0.66</td>
+        <td class="number-float">0.94</td>
+        <td class="number-float">0.78</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">1.00</td>
+        <td class="number-float">0.50</td>
+    </tr>
+    <tr>
+        <td>Soundness(D<sub>priv+</sub>&nbsp;|&nbsp;<a>D<sub>doc</sub>)</td>
+        <td class="number-float">0.47</td>
+        <td class="number-float">0.60</td>
+        <td class="number-float">0.20</td>
+        <td class="number-float">0.06</td>
+        <td class="number-float">0.59</td>
+        <td class="number-float">0.03</td>
+        <td class="number-float">0.90</td>
+        <td class="number-float">0.09</td>
+        <td class="number-float">0.01</td>
+        <td class="number-float">0.50</td>
+        <td class="number-float">0.33</td>
+        <td class="number-float">0.29</td>
+    </tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+               
+
+<footer>
+    <div class="container px-0">
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="./bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/ekko-lightbox.min.js"></script>
+<script src="./bootstrap/js/jquery-number-2.1.3.min.js"></script>
+<script>
+    // enable ekko-lightbox
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+                alwaysShowClose: false,
+                wrapping: false
+            });
+    });
+
+    // format any <span class="number"></span> elements using the JQuery Number plugin
+    // the 'true' signals we should read and replace the text contents of the target element.
+    $('.number').number(true, 2, ".", ",");
+    $('.number-int').number(true, 0, ".", ",");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Automatic Core-Developer Identification on GitHub: A Validation Study</title>
+
+    <link href="./bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/ekko-lightbox.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./bootstrap/css/custom.css" media="screen">
+    <link rel="stylesheet" href="./bootstrap/css/pygment.css" media="screen">
+
+</head>
+<body class="pt-0">
+
+
+<header class="jumbotron">
+    <div class="container">
+
+        <h1>
+            Automatic Core-Developer Identification on GitHub:<br> A Validation Study<br>
+        </h1>
+        <p class="paper-venue">
+            &mdash; Supplementary Website
+        </p>
+        
+        <p>
+            Thomas Bock,
+            Nils Alznauer,
+            Mitchell Joblin,
+            Sven Apel
+        </p>
+
+        <div class="partners">
+            <a href="https://www.se.cs.uni-saarland.de/">
+                <img src="./images/uni-saarland-logo.png" alt="Saarland University, Saarbrücken">
+            </a>
+            <a href="https://www.se.cs.uni-saarland.de/">
+                <img src="./images/sic-logo.png" alt="Saarland Informatics Campus">
+            </a>
+            <a href="https://www.se.cs.uni-saarland.de/">
+                <img src="./images/se-logo.png" alt="Chair of Software Engineering, Saarland University">
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- Navigation
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="navigation">Navigation</h2>
+        </header>
+
+        <nav class="nav flex-column border-top border-bottom">
+
+            <a class="nav-link" href="#abstract">Abstract</a>
+            <a class="nav-link" href="#subject-projects">Subject Projects</a>
+            <a class="nav-link" href="#results">Results</a>
+            <a class="nav-link" href="#downloads">Downloads</a>
+            <a class="nav-link" href="#contact">Contact</a>
+
+        </nav>
+
+    </section>
+
+
+   <!-- Overview
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="abstract">Abstract</h2>
+        </header>
+
+        <p>
+Many open-source software (OSS) projects are self-organized and do not maintain official lists with information on developer roles.
+So, knowing which developers take core and maintainer roles is, despite being relevant, often tacit knowledge.
+We propose a method to <i>automatically</i> extract core developers and maintainers from role permissions of privileged events triggered in GitHub issues and pull requests.
+In an empirical study on 25&nbsp;GitHub projects, we (1) validate the set of automatically identified core developers with a sample of project-reported developer lists, and we (2) use our set of identified core developers to assess the accuracy of state-of-the-art unsupervised developer classification methods.
+Our results indicate that the set of core developers, which we extracted from privileged issues events, is sound and the accuracy of state-of-the-art unsupervised classification methods depends mainly on the data source (commit data vs. issue data) rather than the network-construction method (directed vs. undirected, etc.).
+In perspective, our results shall guide research and practice to choose appropriate <i>unsupervised</i> classification methods, and our method can help create reliable ground-truth data for training <i>supervised</i> classification methods.
+        </p>
+
+    </section>
+
+
+   <!-- Subject Projects
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="subject-projects">Subject Projects</h2>
+        </header>
+
+<table id="table-subjectprojects" class="table table-hover">
+    <thead>
+        <tr class="bg-secondary">
+        <td>Subject<br>Project</td>
+        <td>Investigated<br>Time Period</td>
+        <td>#&nbsp;Commit<br>Authors</td>
+        <td>#&nbsp;Issue<br>Participants</td>
+        <td>#&nbsp;Commits</td>
+        <td>#&nbsp;Issues<br>incl. PRs</td>
+        <td>Project<br>Domain</td>
+        <td>Programming<br>Language</td>
+    </tr>
+ </thead>
+<tbody>
+    <tr>
+        <td class="tool"><a href="https://github.com/angular/angular.git">Angular</a></td>
+        <td>2014-09--2020-09</td>
+        <td class="number-int">667</td>
+        <td class="number-int">22859</td>
+        <td class="number-int">12349</td>
+        <td class="number-int">38502</td>
+        <td>Web development platform</td>
+        <td>TypeScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/atom/atom.git">Atom</a></td>
+        <td>2012-01--2020-12</td>
+        <td class="number-int">298</td>
+        <td class="number-int">21047</td>
+        <td class="number-int">15627</td>
+        <td class="number-int">21138</td>
+        <td>Text editor</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/twbs/bootstrap.git">Bootstrap</a></td>
+        <td>2011-08--2020-12</td>
+        <td class="number-int">219</td>
+        <td class="number-int">24744</td>
+        <td class="number-int">2266</td>
+        <td class="number-int">31735</td>
+        <td>Web front-end framework</td>
+        <td>JavaScript, HTML</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/denoland/deno.git">Deno</a></td>
+        <td>2018-05--2020-12</td>
+        <td class="number-int">348</td>
+        <td class="number-int">3070</td>
+        <td class="number-int">3417</td>
+        <td class="number-int">8760</td>
+        <td>Runtime for JavaScript</td>
+        <td>Rust, JavaScript, TypeScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/google/data-transfer-project.git">DTP</a></td>
+        <td>2018-01--2020-04</td>
+        <td class="number-int">16</td>
+        <td class="number-int">73</td>
+        <td class="number-int">633</td>
+        <td class="number-int">859</td>
+        <td>Framework for data transfer</td>
+        <td>Java</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/electron/electron.git">Electron</a></td>
+        <td>2013-05--2020-12</td>
+        <td class="number-int">392</td>
+        <td class="number-int">15559</td>
+        <td class="number-int">10664</td>
+        <td class="number-int">26733</td>
+        <td>Application development framework</td>
+        <td>C++, TypeScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/flutter/flutter.git">Flutter</a></td>
+        <td>2015-03--2020-12</td>
+        <td class="number-int">683</td>
+        <td class="number-int">34460</td>
+        <td class="number-int">13367</td>
+        <td class="number-int">72504</td>
+        <td>UI development kit</td>
+        <td>Dart</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/jquery/jquery.git">jQuery</a></td>
+        <td>2010-09--2020-12</td>
+        <td class="number-int">244</td>
+        <td class="number-int">3118</td>
+        <td class="number-int">2675</td>
+        <td class="number-int">4723</td>
+        <td>JavaScript library</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/keras-team/keras.git">Keras</a></td>
+        <td>2015-03--2019-11</td>
+        <td class="number-int">716</td>
+        <td class="number-int">12688</td>
+        <td class="number-int">3471</td>
+        <td class="number-int">13468</td>
+        <td>Deep learning API</td>
+        <td>Python</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/kubernetes/kubernetes.git">Kubernetes</a></td>
+        <td>2014-06--2020-12</td>
+        <td class="number-int">2408</td>
+        <td class="number-int">23220</td>
+        <td class="number-int">38619</td>
+        <td class="number-int">97218</td>
+        <td>Container management</td>
+        <td>Go</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/moby/moby.git">Moby</a></td>
+        <td>2013-01--2020-12</td>
+        <td class="number-int">1154</td>
+        <td class="number-int">29083</td>
+        <td class="number-int">14072</td>
+        <td class="number-int">41731</td>
+        <td>Software containerization</td>
+        <td>Go</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/nextcloud/server.git">Nextcloud</a></td>
+        <td>2016-06--2020-09</td>
+        <td class="number-int">355</td>
+        <td class="number-int">9510</td>
+        <td class="number-int">9718</td>
+        <td class="number-int">22689</td>
+        <td>Cloud server</td>
+        <td>PHP, JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/vercel/next.js.git">Next.js</a></td>
+        <td>2016-10--2020-12</td>
+        <td class="number-int">867</td>
+        <td class="number-int">11087</td>
+        <td class="number-int">3891</td>
+        <td class="number-int">15344</td>
+        <td>React framework</td>
+        <td>JavaScript, TypeScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/nodejs/node.git">Node.js</a></td>
+        <td>2014-11--2020-02</td>
+        <td class="number-int">1793</td>
+        <td class="number-int">13190</td>
+        <td class="number-int">12118</td>
+        <td class="number-int">31372</td>
+        <td>JavaScript runtime environment</a></td>
+        <td>JavaScript, C++, Python</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/openssl/openssl.git">OpenSSL</a></td>
+        <td>2013-05--2019-12</td>
+        <td class="number-int">400</td>
+        <td class="number-int">3303</td>
+        <td class="number-int">8722</td>
+        <td class="number-int">10639</td>
+        <td>Crypto library</td>
+        <td>C, Perl</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/owncloud/core.git">ownCloud</a></td>
+        <td>2012-08--2019-10</td>
+        <td class="number-int">393</td>
+        <td class="number-int">10141</td>
+        <td class="number-int">18274</td>
+        <td class="number-int">36178</td>
+        <td>Cloud server</td>
+        <td>PHP, JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/facebook/react.git">React</a></td>
+        <td>2013-05--2020-12</td>
+        <td class="number-int">796</td>
+        <td class="number-int">16056</td>
+        <td class="number-int">6921</td>
+        <td class="number-int">20252</td>
+        <td>JavaScript library</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/reduxjs/redux.git">Redux</a></td>
+        <td>2015-06--2020-12</td>
+        <td class="number-int">228</td>
+        <td class="number-int">4123</td>
+        <td class="number-int">701</td>
+        <td class="number-int">3931</td>
+        <td>Container for JavaScript</td>
+        <td>TypeScript, JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/hakimel/reveal.js.git">reveal.js</a></td>
+        <td>2011-06--2020-10</td>
+        <td class="number-int">141</td>
+        <td class="number-int">2861</td>
+        <td class="number-int">1090</td>
+        <td class="number-int">2762</td>
+        <td>HTML presentation framework</td>
+        <td>JavaScript, HTML</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/tensorflow/tensorflow.git">TensorFlow</a></td>
+        <td>2015-11--2020-12</td>
+        <td class="number-int">1519</td>
+        <td class="number-int">35781</td>
+        <td class="number-int">55499</td>
+        <td class="number-int">45652</td>
+        <td>Machine learning framework</td>
+        <td>C++, Python</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/mrdoob/three.js.git">Three.js</a></td>
+        <td>2010-04--2020-12</td>
+        <td class="number-int">954</td>
+        <td class="number-int">8280</td>
+        <td class="number-int">15999</td>
+        <td class="number-int">20845</td>
+        <td>JavaScript library</td>
+        <td>JavaScript, HTML</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/microsoft/TypeScript.git">TypeScript</a></td>
+        <td>2014-07--2020-12</td>
+        <td class="number-int">467</td>
+        <td class="number-int">18397</td>
+        <td class="number-int">17934</td>
+        <td class="number-int">40973</td>
+        <td>JavaScript language</td>
+        <td>TypeScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/microsoft/vscode.git">VS Code</a></td>
+        <td>2015-11--2020-12</td>
+        <td class="number-int">1001</td>
+        <td class="number-int">67882</td>
+        <td class="number-int">49814</td>
+        <td class="number-int">111073</td>
+        <td>Integrated development environment</td>
+        <td>TypeScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/vuejs/vue">Vue</a></td>
+        <td>2016-04--2020-11</td>
+        <td class="number-int">217</td>
+        <td class="number-int">8754</td>
+        <td class="number-int">2256</td>
+        <td class="number-int">9325</td>
+        <td>JavaScript UI framework</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr>
+        <td class="tool"><a href="https://github.com/webpack/webpack.git">webpack</a></td>
+        <td>2012-05--2020-12</td>
+        <td class="number-int">501</td>
+        <td class="number-int">13091</td>
+        <td class="number-int">5671</td>
+        <td class="number-int">11710</td>
+        <td>Bundler for modules</td>
+        <td>JavaScript</td>
+    </tr>
+    </tbody>
+</table>
+
+
+    </section>
+
+   <!-- Results
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="results">Results</h2>
+        </header>
+       
+        
+        <p>Our results are arranged according to our three research questions: <br>
+        </p>
+
+        <div>
+            <h4 id="results-timediff">RQ<sub>1</sub>: <br>How long is the typical time difference between a developer's events that require, at least, write permission?</h4>
+            <a class="nav-link" href="./results-rq1-distances-privileged.html" rel="import">Time Differences between Privileged or Privileged+Extended Events</a>
+
+        </div>
+        
+        <div>
+            <h4 id="results-timediff">RQ<sub>2</sub>: <br>Is the set of privileged developers D<sub>priv</sub> a sound approximation for the set of core developers?</h4>
+            <a class="nav-link" href="./results-rq2.html" rel="import">Validation of our Set of Core Developers</a>
+
+        </div>
+
+        <div>
+            <h4 id="#results-classification-methods">RQ<sub>3</sub>: <br>Which metrics and network-construction methods are most accurate in classifying developers into core and peripheral?</h4>
+<p></p> 
+    <hr/>
+    <h5>Using privileged events</h5>
+    <a class="nav-link" href="./results-rq3-all-privileged.html" rel="import">Accuracy of the Classification Methods (across all projects)</a>
+    <a class="nav-link" href="./results-rq3-individual-privileged.html" rel="import">Accuracy of the Classification Methods (individually for each project)</a>
+    <a class="nav-link" href="./results-rq3-rankdist-privileged.html" rel="import">Distribution of the Ranks of the Classification Methods</a>
+    <a class="nav-link" href="./results-rq3-sizes-privileged.html" rel="import">Sizes of Privileged Developers, Classified Core Developers, and Classified Peripheral Developers</a>
+    <a class="nav-link" href="./results-rq3-PrivDevsNotPart-privileged.html" rel="import">Percentage of Privileged Developers not Part of Classification</a>
+    <hr/>
+    <h5>Using privileged+extended events</h5>
+    <a class="nav-link" href="./results-rq3-all-privileged-extended.html" rel="import">Accuracy of the Classification Methods (across all projects)</a>
+    <a class="nav-link" href="./results-rq3-individual-privileged-extended.html" rel="import">Accuracy of the Classification Methods (individually for each project)</a>
+    <a class="nav-link" href="./results-rq3-rankdist-privileged-extended.html" rel="import">Distribution of the Ranks of the Classification Methods</a>
+    <a class="nav-link" href="./results-rq3-sizes-privileged-extended.html" rel="import">Sizes of Privileged+Extended Developers, Classified Core Developers, and Classified Peripheral Developers</a>
+    <a class="nav-link" href="./results-rq3-PrivDevsNotPart-privileged-extended.html" rel="import">Percentage of Privileged+Extended Developers not Part of Classification</a>
+    <hr/>
+    </section>
+
+   <!-- Downloads
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="downloads">Downloads</h2>
+        </header>
+
+        <p>
+            <strong>Note:</strong>
+            For data privacy reasons, we cannot distribute the raw data that we gathered using our data-extraction tools.
+            Instead, we only provide pseudonymized raw data as input data for our scripts.
+            Please refer to the respective tools to produce a non-pseudonymized set of raw data for yourself.
+            You can find more information on the analyzed time ranges and all needed further information in our subject projects above in <a href="#subject-projects">Table 1</a>.
+        </p>
+        
+         <ul>
+            <li>
+                
+                <a href="https://drive.google.com/file/d/1JNzqd8eepG2cvPzZIo-nxCubVy7tyHKk/view?usp=sharing">Pseudonymized input data (containing commit data and issue data)</a>
+            </li>
+                        <li>
+                
+                <a href="https://drive.google.com/file/d/1y2rMbFlIEd5t57HX-u4kLN4dHB031hdt/view?usp=sharing">Resulting pseudonymized classification data (values of the different classification methods for each developer for each project, as well as the set of privileged and privileged+extended developers)</a>
+            </li>
+            <li>
+                <a href="downloads/GitHubWrapper.zip">Our tool GitHubWrapper for getting issue data from GitHub (to be published upon acceptance)</a>
+
+            </li>
+            <li>
+                
+                <a href="downloads/developer-classifications-scripts.zip">Our scripts to perform the analyses</a>
+            </li>
+        </ul>
+
+    </section>
+
+        <!-- Contact
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="contact">Contact</h2>
+        </header>
+
+        <p>
+            If you have any questions regarding this paper, please do not hesitate to contact us:
+        </p>
+
+        <ul>
+            <li><a href="https://www.se.cs.uni-saarland.de/people/bock.php">Thomas Bock</a> (Saarland University, Saarland Informatics Campus, Saarbrücken, Germany)</li>
+            <li><a>Nils Alznauer</a> (Saarland University, Saarland Informatics Campus, Saarbrücken, Germany)</li>
+            <li><a>Mitchell Joblin</a> (Siemens AG, Munich, Germany & Saarland University, Saarland Informatics Campus, Saarbrücken, Germany)</li>
+            <li><a href="https://www.se.cs.uni-saarland.de/apel/">Sven Apel</a> (Saarland University, Saarland Informatics Campus, Saarbrücken, Germany)</li>
+        </ul>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="container px-0">
+        <p class="text-muted">&copy; Saarland University, 2022</p>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="./bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/ekko-lightbox.min.js"></script>
+<script src="./bootstrap/js/jquery-number-2.1.3.min.js"></script>
+<script>
+    // enable ekko-lightbox
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+                alwaysShowClose: false,
+                wrapping: false
+            });
+    });
+
+    // format any <span class="number"></span> elements using the JQuery Number plugin
+    // the 'true' signals we should read and replace the text contents of the target element.
+    $('.number').number(true, 2, ".", ",");
+    $('.number-int').number(true, 0, ".", ",");
+</script>
+
+</body>
+</html>

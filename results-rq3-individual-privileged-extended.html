@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Automatic Core-Developer Identification on GitHub: A Validation Study</title>
+
+    <link href="./bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/ekko-lightbox.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./bootstrap/css/custom.css" media="screen">
+    <link rel="stylesheet" href="./bootstrap/css/pygment.css" media="screen">
+
+</head>
+<body class="pt-0">
+
+<header class="jumbotron">
+    <div class="container">
+
+        <h1>
+            Automatic Core-Developer Identification on GitHub:<br> A Validation Study<br>
+        </h1>
+        <p class="paper-venue">
+            &mdash; <a href="./index.html">Back to main page</a>
+        </p>
+
+    </div>
+</header>
+
+<main class="container">
+
+        <header>
+            <h3 id="results">RQ<sub>3</sub>: Which metrics and network-construction methods are most accurate in classifying developers into core and peripheral?</h3>
+        </header>
+        <div> <p></p>
+            <h4 id="#results-classification-methods">Accuracy of the Classification Methods (individually for each project)</h4>
+<p></p>Jump to results for <br> <a href="#results-classification-methods-unsimplified-undirected-allcontributors-privileged+extended">Unsimplified, undirected, all contributors</a> <br>
+                           <a href="#results-classification-methods-unsimplified-directed-allcontributors-privileged+extended" >Unsimplified, directed, all contributors</a> <br>
+                           <a href="#results-classification-methods-simplified-undirected-allcontributors-privileged+extended" >Simplified, undirected, all contributors</a> <br>
+                           <a href="#results-classification-methods-simplified-directed-allcontributors-privileged+extended" >Simplified, directed, all contributors</a> <br>
+                           <a href="#results-classification-methods-unsimplified-undirected-codecontributors-privileged+extended" >Unsimplified, undirected, code contributors</a> <br>
+                           <a href="#results-classification-methods-unsimplified-directed-codecontributors-privileged+extended" >Unsimplified, directed, code contributors</a> <br>
+                           <a href="#results-classification-methods-simplified-undirected-codecontributors-privileged+extended" >Simplified, undirected, code contributors</a> <br>
+                           <a href="#results-classification-methods-simplified-directed-codecontributors-privileged+extended" >Simplified, directed, code contributors</a> </p>
+
+        </div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-unsimplified-undirected-allcontributors-privileged+extended"><span>Networks: unsimplified, undirected, all contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow.svg" alt="classification-results-unsimplified-undirected-allcontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+               
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-unsimplified-directed-allcontributors-privileged+extended"><span>Networks: unsimplified, directed, all contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow.svg" alt="classification-results-unsimplified-directed-allcontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-simplified-undirected-allcontributors-privileged+extended"><span>Networks: Simplified, undirected, all contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow.svg" alt="classification-results-simplified-undirected-allcontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-simplified-directed-allcontributors-privileged+extended"><span>Networks: Simplified, directed, all contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months_slidingWindow/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow.svg" alt="classification-results-simplified-directed-allcontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+               
+<! -----------------------------------------above: all contributors. below: code contributors---------------------------------------------------------->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-unsimplified-undirected-codecontributors-privileged+extended"><span>Networks: unsimplified, undirected, code contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-undirected-codecontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+               
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-unsimplified-directed-codecontributors-privileged+extended"><span>Networks: unsimplified, directed, code contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/3months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/6months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/9months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/global/overall-plots/12months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_FT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-unsimplified-directed-codecontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-simplified-undirected-codecontributors-privileged+extended"><span>Networks: Simplified, undirected, code contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TF_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-undirected-codecontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-classification-methods-simplified-directed-codecontributors-privileged+extended"><span>Networks: Simplified, directed, code contributors <br>Accuracy assessment based on privileged+extended events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-3months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-6months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-9months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-12months" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/3months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_3months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-3months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/6months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_6months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-6months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/9months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_9months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-9months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+        <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img src="results/globalWithSimplification/overall-plots/12months_slidingWindow_onlyPreviousContributors/GT-issuesInclExtended/ComparisonSet-CoreClassification/allProjects_TT_GT-issuesInclExtended_ComparisonSet-CoreClassification_byClassification_12months_slidingWindow_onlyPreviousContributors.svg" alt="classification-results-simplified-directed-codecontributors-privileged+extended-12months-sliding" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody></table>
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<footer>
+    <div class="container px-0">
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="./bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/ekko-lightbox.min.js"></script>
+<script src="./bootstrap/js/jquery-number-2.1.3.min.js"></script>
+<script>
+    // enable ekko-lightbox
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+                alwaysShowClose: false,
+                wrapping: false
+            });
+    });
+
+    // format any <span class="number"></span> elements using the JQuery Number plugin
+    // the 'true' signals we should read and replace the text contents of the target element.
+    $('.number').number(true, 2, ".", ",");
+    $('.number-int').number(true, 0, ".", ",");
+</script>
+
+</body>
+</html>

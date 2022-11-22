@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Automatic Core-Developer Identification on GitHub: A Validation Study</title>
+
+    <link href="./bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./bootstrap/css/ekko-lightbox.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./bootstrap/css/custom.css" media="screen">
+    <link rel="stylesheet" href="./bootstrap/css/pygment.css" media="screen">
+
+</head>
+<body class="pt-0">
+
+<header class="jumbotron">
+    <div class="container">
+
+        <h1>
+            Automatic Core-Developer Identification on GitHub:<br> A Validation Study<br>
+        </h1>
+        <p class="paper-venue">
+            &mdash; <a href="./index.html">Back to main page</a>
+        </p>
+
+    </div>
+</header>
+
+<main class="container">
+
+        <header>
+            <h3 id="results">RQ<sub>1</sub>: How long is the typical time difference between a developer's events that require, at least, write permission?</h3>
+        </header>
+        
+        <p></p>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<h5 id="results-distances-privileged"><span>Time Differences between Privileged Events</span></h5>
+
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img class="resize" class="resize" src="results/global/overall-plots/time_diff_between_events/allProjects_cumulative-distribution_developers_by_median_time_between_events_12months_medianDeveloperBased_priviledged.svg" alt="time-diffs-privileged" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+ </tbody>
+ </table> 
+    
+<h5 id="results-distances-privileged+extended"><span>Time Differences between Privileged+Extended Events</span></h5>
+<table class="table figures" style="text-align: right;">
+    <tbody>
+    <tr>
+        <td class="text-left">
+            <figure class="text-center">
+                <img class="resize" class="resize" src="results/global/overall-plots/time_diff_between_events/allProjects_cumulative-distribution_developers_by_median_time_between_events_12months_medianDeveloperBased_priviledgedAndExtended.svg" alt="time-diffs-privileged-extended" class="img-responsive center-block">
+            </figure>
+        </td>
+    </tr>
+</tbody>
+</table> 
+
+<p></p>Jump to <a href="#results">top of page</a> |
+               <a href="./index.html#results">results</a> <br><p></p>
+               
+
+<footer>
+    <div class="container px-0">
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="./bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/ekko-lightbox.min.js"></script>
+<script src="./bootstrap/js/jquery-number-2.1.3.min.js"></script>
+<script>
+    // enable ekko-lightbox
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+                alwaysShowClose: false,
+                wrapping: false
+            });
+    });
+
+    // format any <span class="number"></span> elements using the JQuery Number plugin
+    // the 'true' signals we should read and replace the text contents of the target element.
+    $('.number').number(true, 2, ".", ",");
+    $('.number-int').number(true, 0, ".", ",");
+</script>
+
+</body>
+</html>
