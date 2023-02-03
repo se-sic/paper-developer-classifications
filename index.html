@@ -67,8 +67,8 @@
             <a class="nav-link" href="#abstract">Abstract</a>
             <a class="nav-link" href="#subject-projects">Subject Projects</a>
             <a class="nav-link" href="#results">Results</a>
-            <a class="nav-link" href="#downloads">Downloads</a>
             <a class="nav-link" href="#tools-used-for-data-extraction">Tools Used for Data Extraction from GitHub</a>
+            <a class="nav-link" href="#downloads">Downloads</a>
             <a class="nav-link" href="#contact">Contact</a>
 
         </nav>
@@ -415,43 +415,6 @@ In perspective, our results shall guide research and practice to choose appropri
     <hr/>
     </section>
 
-   <!-- Downloads
-    ================================================== -->
-    <section>
-        <header>
-            <h2 id="downloads">Downloads</h2>
-        </header>
-
-        <p>
-            <strong>Note:</strong>
-            For data privacy reasons, we cannot distribute the raw data that we gathered using our data-extraction tools.
-            Instead, we only provide pseudonymized raw data as input data for our scripts.
-            Please refer to the respective tools to produce a non-pseudonymized set of raw data for yourself.
-            You can find more information on the analyzed time ranges and all needed further information in our subject projects above in <a href="#subject-projects">Table 1</a>.
-        </p>
-
-         <ul>
-            <li>
-
-                <a href="https://drive.google.com/file/d/1JNzqd8eepG2cvPzZIo-nxCubVy7tyHKk/view?usp=sharing">Pseudonymized input data (containing commit data and issue data)</a>
-            </li>
-                        <li>
-
-                <a href="https://drive.google.com/file/d/1y2rMbFlIEd5t57HX-u4kLN4dHB031hdt/view?usp=sharing">Resulting pseudonymized classification data (values of the different classification methods for each developer for each project, as well as the set of privileged and privileged+extended developers)</a>
-            </li>
-            <li>
-                <a href="https://github.com/se-sic/GitHubWrapper/archive/refs/tags/2022.1.zip">Our tool GitHubWrapper for getting issue data from GitHub</a> <a href="https://github.com/se-sic/GitHubWrapper/">(also available on GitHub)</a>
-
-            </li>
-            <li>
-
-                <a href="downloads/developer-classifications-scripts.zip">Our scripts to perform the analyses</a>
-            </li>
-        </ul>
-
-    </section>
-
-
        <!-- Tools
     ================================================== -->
     <section>
@@ -492,7 +455,7 @@ In perspective, our results shall guide research and practice to choose appropri
                         </p>
 
                         <p class="card-text">
-                            <span class="tool">GitHubWrapper</span> is a tool to extract information from the GitHub issue API.
+                            <span class="tool">GitHubWrapper</span> is a tool to extract information from the GitHub issues API.<br><br>
                         </p>
                     </div>
 
@@ -512,7 +475,7 @@ In perspective, our results shall guide research and practice to choose appropri
                         </p>
 
                         <p class="card-text">
-                            <span class="tool">codeface-extraction</span> is a small extension to <span class="tool">Codeface</span> to extract and preprocess the version-control system and e-mail data.
+                            <span class="tool">codeface-extraction</span> is a small extension to <span class="tool">Codeface</span> to extract and preprocess commit, e-mail, and issue data.
                         </p>
                     </div>
 
@@ -521,7 +484,7 @@ In perspective, our results shall guide research and practice to choose appropri
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br>
 
         <div class="row">
             <div class="col-md-6 col-lg-4">
@@ -552,6 +515,44 @@ In perspective, our results shall guide research and practice to choose appropri
     </section>
 
 
+   <!-- Downloads
+    ================================================== -->
+    <section>
+        <header>
+            <h2 id="downloads">Downloads</h2>
+        </header>
+
+        <p>
+            <strong>Note:</strong>
+            For data privacy reasons, we cannot distribute the raw data that we gathered using our data-extraction tools.
+            Instead, we only provide pseudonymized raw data as input data for our scripts.
+            Please refer to the respective tools to produce a non-pseudonymized set of raw data for yourself.
+            You can find more information on the analyzed time ranges and all needed further information in our subject projects above in <a href="#subject-projects">Table 1</a>.
+        </p>
+
+         <ol>
+            <li>
+                <a href="https://github.com/se-sic/GitHubWrapper/archive/refs/tags/2022.1.zip">Our tool GitHubWrapper for getting issue data from GitHub</a> <a href="https://github.com/se-sic/GitHubWrapper/">(also available on GitHub)</a>
+
+            </li>
+            <li>
+                <a href="https://drive.google.com/file/d/1JNzqd8eepG2cvPzZIo-nxCubVy7tyHKk/view?usp=sharing">Pseudonymized input data (containing commit data and issue data)</a>
+            </li>
+            <li>
+                <a href="downloads/developer-classifications-scripts.zip">Our analysis scripts to perform the analyses</a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/file/d/1y2rMbFlIEd5t57HX-u4kLN4dHB031hdt/view?usp=sharing">Resulting pseudonymized classification data (values of the different classification methods for each developer for each project, as well as the set of privileged and privileged+extended developers)</a>
+            </li>
+            <li>
+                <a href="downloads/developer-classifications-docker.zip">Setup analysis via Dockerfile</a>
+            </li>
+        </ol>
+
+    </section>
+
+
+
         <!-- Contact
     ================================================== -->
     <section>
@@ -577,7 +578,7 @@ In perspective, our results shall guide research and practice to choose appropri
 
 <footer>
     <div class="container px-0">
-        <p class="text-muted">&copy; Saarland University, 2022</p>
+        <p class="text-muted">&copy; Saarland University, 2022–2023</p>
     </div>
 </footer>
 
