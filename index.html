@@ -108,7 +108,7 @@ In perspective, our results shall guide research and practice to choose appropri
             <h2 id="subject-projects">Subject Projects</h2>
         </header>
 
-<table id="table-subjectprojects" class="table table-hover" style="font-size: 1.1vw;">
+<table id="table-subjectprojects" class="table table-hover" style="font-size: small;">
     <thead>
         <tr class="bg-secondary" style="color: white">
         <td>Subject<br>Project</td>
@@ -514,9 +514,29 @@ In perspective, our results shall guide research and practice to choose appropri
             </div>
             <div class="col-md-12 col-lg-8">
                 <div class="card-body" style="hyphens: none;"><br><br>
-                    We developed a set of <span class="tool">R</span> scripts on top of <span class="tool">Codeface</span> and <span class="tool">coronet</span> for our analysis, which are available in the <a href="#downloads">Downloads</a> section. In order to run our scripts, you need to clone <span class="tool">coronet</span> (we have used our scripts with <a href="https://github.com/se-sic/coronet/archive/v4.0.zip">version 4.0</a>) into a subdirectory of the scripts directory. Further information about the data format und input directories can be found in the README.md of <span class="tool">coronet</span> and also in the README.md delivered with our scripts in the Downloads section.
+                    We developed a set of <span class="tool">R</span> scripts on top of <span class="tool">Codeface</span> and <span class="tool">coronet</span> for our analysis, which are available in the <a href="#downloads">Downloads</a> section. In order to run our scripts, you need to clone <span class="tool">coronet</span> (we have used our scripts with <a href="https://github.com/se-sic/coronet/archive/v4.0.zip">version 4.0</a>) into a subdirectory of the scripts directory. Further information about the data format und input directories can be found in the <i>README.md</i> of <span class="tool">coronet</span> and also in the <i>README.md</i> delivered with our scripts in the Downloads section.
                 </div>
             </div>
+        </div><br><br>
+        <div style="hyphens: none;">
+            <h5>Steps to replicate the study:</h5>
+            <ol type="I">
+                <li>
+                    <a>Obtain the input data for our study. There are two independent options how you can achieve that:
+                        <ul>
+                            <li>Either run the tools <a href="https://github.com/se-sic/codeface"><span class="tool">Codeface</span></a> and <a href="https://github.com/se-sic/GitHubWrapper"><span class="tool">GitHubWrapper</span></a> on your own to collect commit and issue data from GitHub, and run <a href="https://github.com/mehdigolzadeh/BoDeGHa"><span class="tool">BoDeGHa</span></a> afterwards to identify bots. Thereafter, you need to run several parts of the <a href="https://github.com/se-sic/codeface-extraction"><span class="tool">codeface-extraction</span></a> (issue_processing, bot_processing, codeface_extraction, author_postprocessing, and anonymization). Note that each of these tools might run several hours or even multiple days (depending on the subject project) to obtain the data for a project. For large projects, a high amount of RAM is necessary (we recommend > 250 MB).
+                            </li>
+                            <li>Or use our pseudonymized, sanity-checked, and manually corrected input data that we have used in our study, which we provide in the <a href="#downloads">Downloads</a> section below (see item 2).
+                            </li>
+                        </ul>
+                    </a>
+
+                </li>
+                <li>
+                    <a>Run our analysis scripts (available below in the <a href="#downloads">Downloads</a> section, see item 3) in R (used with R version 4.1.1). As our scripts use the library <a href="https://github.com/se-sic/coronet/"><span class="tool">coronet</span></a> (version 4.0), <span class="tool">coronet</span> needs to be availble in a subdirectory of the analysis scripts. A documentation of how our analysis scripts work, how they can be configured, etc., is contained in a <i>README.md</i> file that we deliver together with our scripts. For large projects, a high amount of RAM is necessary (we recommend > 250 MB). Our analysis scripts process the issue events, extract the set of privileged developers, construct developer networks, apply the state-of-the-art developer classification methods, and assess their accurcy, etc. As output, our scripts create many plots and data, as well as the resulting classification data as <i>.csv</i> files. The resulting classification data can also be downloaded below in our <a href="#downloads">Downloads</a> section (see item 4).</a>
+                </li>
+        </ol>
+        <a>To replicate step II, we provide a Dockerfile below in the <a href="#downloads">Downloads</a> section (together with a <i>README.md</i> file which describes how to use the Dockerfile). If you set up a docker container based on this Dockerfile, the pseudonymized input data, our analysis scripts, and <span class="tool">coronet</span> are already downloaded in the container and the necessary dependencies get installed, such that you can directly run our analysis scripts within the container. For large projects, a high amount of RAM is necessary (we recommend > 250 MB). More details (also regarding the required R libraries, etc.) can be found in the respective <i>README.md</i> files.</a>
         </div>
     </section>
 
@@ -532,8 +552,8 @@ In perspective, our results shall guide research and practice to choose appropri
             <strong>Note:</strong>
             For data privacy reasons, we cannot distribute the raw data that we gathered using our data-extraction tools.
             Instead, we only provide pseudonymized raw data as input data for our scripts.
-            Please refer to the respective tools to produce a non-pseudonymized set of raw data for yourself.
-            You can find more information on the analyzed time ranges and all needed further information in our subject projects above in <a href="#subject-projects">the corresponding table</a>.
+            Please refer to the respective tools to produce a non-pseudonymized set of raw data for yourself, as described above.
+            You can find more information on the analyzed time ranges and all needed further information about our subject projects above in <a href="#subject-projects">the corresponding table</a>.
         </p>
 
          <ol>
