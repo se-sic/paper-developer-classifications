@@ -222,6 +222,18 @@ td.td111 {
     background-color: rgb(100,0,0);
 }
 
+table tr.bg-light td{
+
+}
+
+table tr.bg-light {
+    background-color: rgb(248,249,250);
+}
+
+table tr.bg-light:hover {
+    background-color: rgb(230,231,232) !important;
+}
+
 .blockquote {
     font-size: inherit;
 }

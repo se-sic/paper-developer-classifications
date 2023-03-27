@@ -83,10 +83,10 @@
             <h2 id="abstract">Abstract</h2>
         </header>
 
-        <p>
+        <p style="hyphens: none;">
 Many open-source software (OSS) projects are self-organized and do not maintain official lists with information on developer roles.
 So, knowing which developers take core and maintainer roles is, despite being relevant, often tacit knowledge.
-We propose a method to <i>automatically</i> extract core developers and maintainers from role permissions of privileged events triggered in GitHub issues and pull requests.
+We propose a method to <i>automatically</i> identify core developers based on role permissions of privileged events triggered in GitHub issues and pull requests.
 In an empirical study on 25&nbsp;GitHub projects, we (1) validate the set of automatically identified core developers with a sample of project-reported developer lists, and we (2) use our set of identified core developers to assess the accuracy of state-of-the-art unsupervised developer classification methods.
 Our results indicate that the set of core developers, which we extracted from privileged issues events, is sound and the accuracy of state-of-the-art unsupervised classification methods depends mainly on the data source (commit data vs. issue data) rather than the network-construction method (directed vs. undirected, etc.).
 In perspective, our results shall guide research and practice to choose appropriate <i>unsupervised</i> classification methods, and our method can help create reliable ground-truth data for training <i>supervised</i> classification methods.
@@ -108,9 +108,9 @@ In perspective, our results shall guide research and practice to choose appropri
             <h2 id="subject-projects">Subject Projects</h2>
         </header>
 
-<table id="table-subjectprojects" class="table table-hover">
+<table id="table-subjectprojects" class="table table-hover" style="font-size: 1.1vw;">
     <thead>
-        <tr class="bg-secondary">
+        <tr class="bg-secondary" style="color: white">
         <td>Subject<br>Project</td>
         <td>Investigated<br>Time Period</td>
         <td>#&nbsp;Commit<br>Authors</td>
@@ -323,7 +323,7 @@ In perspective, our results shall guide research and practice to choose appropri
         <td>C++, Python</td>
     </tr>
     <tr>
-        <td class="tool"><a href="https://github.com/mrdoob/three.js.git">Three.js</a></td>
+        <td class="tool"><a href="https://github.com/mrdoob/three.js.git">three.js</a></td>
         <td>2010-04--2020-12</td>
         <td class="number-int">954</td>
         <td class="number-int">8280</td>
@@ -389,35 +389,35 @@ In perspective, our results shall guide research and practice to choose appropri
         <p>Our results are arranged according to our three research questions: <br>
         </p>
 
-        <div>
-            <h4 id="results-timediff">RQ<sub>1</sub>: <br>How long is the typical time difference between a developer's events that require, at least, write permission?</h4>
-            <a class="nav-link" href="./results-rq1-distances-privileged.html" rel="import">Time Differences between Privileged or Privileged+Extended Events</a>
+        <div style="hyphens: none;">
+            <h4 id="results-timediff">RQ<sub>1</sub>: How long is the typical time difference between a developer's events that require, at least, write permission?</h4>
+            <a class="nav-link" href="./results-rq1-distances-privileged.html" rel="import">Time differences between privileged or privileged+extended events</a>
 
-        </div>
+        </div><br>
 
-        <div>
-            <h4 id="results-timediff">RQ<sub>2</sub>: <br>Is the set of privileged developers D<sub>priv</sub> a sound approximation for the set of core developers?</h4>
-            <a class="nav-link" href="./results-rq2.html" rel="import">Validation of our Set of Core Developers</a>
+        <div style="hyphens: none;">
+            <h4 id="results-timediff">RQ<sub>2</sub>: Is the set of privileged developers D<sub>priv</sub> a sound approximation for the set of core developers?</h4>
+            <a class="nav-link" href="./results-rq2.html" rel="import">Validation of our set of core developers</a>
 
-        </div>
+        </div><br>
 
-        <div>
-            <h4 id="#results-classification-methods">RQ<sub>3</sub>: <br>Which metrics and network-construction methods are most accurate in classifying developers into core and peripheral?</h4>
+        <div style="hyphens: none;">
+            <h4 id="#results-classification-methods">RQ<sub>3</sub>: Which metrics and network-construction methods are most accurate in classifying developers into core and peripheral?</h4>
 <p></p>
     <hr/>
     <h5>Using privileged events</h5>
-    <a class="nav-link" href="./results-rq3-all-privileged.html" rel="import">Accuracy of the Classification Methods (across all projects)</a>
-    <a class="nav-link" href="./results-rq3-individual-privileged.html" rel="import">Accuracy of the Classification Methods (individually for each project)</a>
-    <a class="nav-link" href="./results-rq3-rankdist-privileged.html" rel="import">Distribution of the Ranks of the Classification Methods</a>
-    <a class="nav-link" href="./results-rq3-sizes-privileged.html" rel="import">Sizes of Privileged Developers, Classified Core Developers, and Classified Peripheral Developers</a>
-    <a class="nav-link" href="./results-rq3-PrivDevsNotPart-privileged.html" rel="import">Percentage of Privileged Developers not Part of Classification</a>
+    <a class="nav-link" href="./results-rq3-all-privileged.html" rel="import">Accuracy of the classification methods (across all projects)</a>
+    <a class="nav-link" href="./results-rq3-individual-privileged.html" rel="import">Accuracy of the classification methods (individually for each project)</a>
+    <a class="nav-link" href="./results-rq3-rankdist-privileged.html" rel="import">Distribution of the ranks of the classification methods</a>
+    <a class="nav-link" href="./results-rq3-sizes-privileged.html" rel="import">Sizes of the sets privileged developers, classified core developers, and classified peripheral developers</a>
+    <a class="nav-link" href="./results-rq3-PrivDevsNotPart-privileged.html" rel="import">Percentage of privileged developers not part of classification</a>
     <hr/>
     <h5>Using privileged+extended events</h5>
-    <a class="nav-link" href="./results-rq3-all-privileged-extended.html" rel="import">Accuracy of the Classification Methods (across all projects)</a>
-    <a class="nav-link" href="./results-rq3-individual-privileged-extended.html" rel="import">Accuracy of the Classification Methods (individually for each project)</a>
-    <a class="nav-link" href="./results-rq3-rankdist-privileged-extended.html" rel="import">Distribution of the Ranks of the Classification Methods</a>
-    <a class="nav-link" href="./results-rq3-sizes-privileged-extended.html" rel="import">Sizes of Privileged+Extended Developers, Classified Core Developers, and Classified Peripheral Developers</a>
-    <a class="nav-link" href="./results-rq3-PrivDevsNotPart-privileged-extended.html" rel="import">Percentage of Privileged+Extended Developers not Part of Classification</a>
+    <a class="nav-link" href="./results-rq3-all-privileged-extended.html" rel="import">Accuracy of the classification methods (across all projects)</a>
+    <a class="nav-link" href="./results-rq3-individual-privileged-extended.html" rel="import">Accuracy of the classification methods (individually for each project)</a>
+    <a class="nav-link" href="./results-rq3-rankdist-privileged-extended.html" rel="import">Distribution of the ranks of the classification methods</a>
+    <a class="nav-link" href="./results-rq3-sizes-privileged-extended.html" rel="import">Sizes of the sets privileged+extended developers, classified core developers, and classified peripheral developers</a>
+    <a class="nav-link" href="./results-rq3-PrivDevsNotPart-privileged-extended.html" rel="import">Percentage of privileged+extended eevelopers not part of classification</a>
     <hr/>
     </section>
 
@@ -513,7 +513,7 @@ In perspective, our results shall guide research and practice to choose appropri
                 </div>
             </div>
             <div class="col-md-12 col-lg-8">
-                <div class="card-body"><br><br>
+                <div class="card-body" style="hyphens: none;"><br><br>
                     We developed a set of <span class="tool">R</span> scripts on top of <span class="tool">Codeface</span> and <span class="tool">coronet</span> for our analysis, which are available in the <a href="#downloads">Downloads</a> section. In order to run our scripts, you need to clone <span class="tool">coronet</span> (we have used our scripts with <a href="https://github.com/se-sic/coronet/archive/v4.0.zip">version 4.0</a>) into a subdirectory of the scripts directory. Further information about the data format und input directories can be found in the README.md of <span class="tool">coronet</span> and also in the README.md delivered with our scripts in the Downloads section.
                 </div>
             </div>
@@ -533,7 +533,7 @@ In perspective, our results shall guide research and practice to choose appropri
             For data privacy reasons, we cannot distribute the raw data that we gathered using our data-extraction tools.
             Instead, we only provide pseudonymized raw data as input data for our scripts.
             Please refer to the respective tools to produce a non-pseudonymized set of raw data for yourself.
-            You can find more information on the analyzed time ranges and all needed further information in our subject projects above in <a href="#subject-projects">Table 1</a>.
+            You can find more information on the analyzed time ranges and all needed further information in our subject projects above in <a href="#subject-projects">the corresponding table</a>.
         </p>
 
          <ol>
